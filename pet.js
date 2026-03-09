@@ -10,15 +10,15 @@ Simulate the Day: * At the very bottom of your code, call your functions in what
 Open your terminal and run your program!*/
 
 const petName = "Poppy";
-let energy = 50;
-let hunger = 10;
-let happiness = 50;
+let energy = Math.ceil(Math.random() * 100);
+let hunger = Math.ceil(Math.random() * 100);
+let happiness = Math.ceil(Math.random() * 100);
 
 const feed = () => {
   if (hunger < 10) {
     return `\n${petName} refuses to eat`;
   } else {
-    hunger -= 10;
+    hunger -= 200;
     energy += 10;
     return `\n${petName} ate some delicious food.`;
   }
